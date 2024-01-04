@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-element {
+    @apply w-90vw mx-auto max-w-sm sm:max-w-7xl;
+  }
+
+  .nav-link::after {
+    content: '';
+    height: 3px;
+    transform: translateY(1.5em);
+    @apply absolute w-0 border-b-primary-300 border-b-2 inset-0 duration-300 z-0 hover:w-4/5;
+  }
+
+  .hero-pattern {
+    background-image: url('/src/images/contour.png');
+    z-index: 2;
+    @apply absolute inset-0 opacity-10 bg-no-repeat bg-center bg-cover;
+  }
+
+  .btn {
+    @apply inline-block text-lg uppercase border-2 rounded px-8 py-1 my-5 duration-300 tracking-wider sm:text-xl sm:mb-10 sm:px-10 sm:py-2 md:hover:px-14 xl:text-2xl xl:px-12 xl:py-3 xl:hover:px-16;
+  }
+
+  .social-link {
+    @apply w-10 h-10 lg:w-9 lg:h-9 opacity-75 hover:opacity-95 hover:scale-105 duration-300;
+  }
+}
